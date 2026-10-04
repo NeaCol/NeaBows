@@ -1,0 +1,25 @@
+name: NeaBows
+version: '${project.version}'
+main: me.neabows.NeaBows
+api-version: '1.21'
+description: Plugin de arcos con poderes especiales y partículas
+authors: [ NeaBows ]
+prefix: NeaBows
+
+commands:
+  neabow:
+    description: Comando principal de NeaBows
+    usage: /neabow <set|remove|list|give|reload>
+    permission: neabows.use
+    aliases: [ nb ]
+
+permissions:
+  neabows.use:
+    description: Permite usar /neabow set, remove y list
+    default: op
+  neabows.give:
+    description: Permite usar /neabow give
+    default: op
+  neabows.admin:
+    description: Acceso completo incluyendo reload
+    default: op

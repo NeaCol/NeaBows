@@ -1,0 +1,57 @@
+# ================================================================
+#   NeaBows - Configuración Principal
+# ================================================================
+
+settings:
+  # ¿Mostrar partículas de rastro en las flechas con poder?
+  trail-particles: true
+  # Ticks entre cada partícula de rastro (2 = denso, 4 = normal, 6 = ligero)
+  trail-interval: 2
+  # ¿Los poderes afectan a otros jugadores?
+  affect-players: true
+  # ¿El poder te afecta a ti mismo si te disparas?
+  affect-self: false
+
+# ─────────────────────────────────────────────────────────────────
+# Cooldowns (en segundos). Evita abusos de spam.
+# 0 = sin cooldown para ese poder.
+# El cooldown empieza cuando la flecha SALE del arco.
+# ─────────────────────────────────────────────────────────────────
+cooldowns:
+  # Cooldown global si no se especifica uno específico
+  global: 3
+  # Cooldowns individuales por poder (sobreescriben al global)
+  per-power:
+    fuego: 3
+    hielo: 4
+    muertos: 5
+    viento: 3
+    escorpion: 4
+    hueso: 3
+    tierra: 3
+
+# ─────────────────────────────────────────────────────────────────
+# Sonidos (nombres de la enum Sound de Bukkit 1.21.1)
+# ─────────────────────────────────────────────────────────────────
+sounds:
+  fuego:
+    shoot: ENTITY_BLAZE_SHOOT
+    hit: ENTITY_BLAZE_HURT
+  hielo:
+    shoot: BLOCK_POWDER_SNOW_STEP
+    hit: ENTITY_PLAYER_HURT_FREEZE
+  muertos:
+    shoot: ENTITY_WITHER_SHOOT
+    hit: ENTITY_WITHER_HURT
+  viento:
+    shoot: ENTITY_PHANTOM_FLAP
+    hit: ENTITY_PHANTOM_HURT
+  escorpion:
+    shoot: ENTITY_SPIDER_AMBIENT
+    hit: ENTITY_SPIDER_HURT
+  hueso:
+    shoot: ENTITY_SKELETON_SHOOT
+    hit: ENTITY_SKELETON_HURT
+  tierra:
+    shoot: BLOCK_GRAVEL_BREAK
+    hit: BLOCK_GRAVEL_PLACE
