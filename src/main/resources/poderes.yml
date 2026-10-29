@@ -1,16 +1,18 @@
-# ================================================================
-#   NeaBows - Configuración de Poderes
-#   Aquí puedes personalizar cada poder, sus niveles y efectos.
+# ==============================================================================
+# NeaBows - Elemental Powers Configuration Specification
+# Tiered progression, particle color palettes, and potion effect mechanics.
 #
-#   Efectos disponibles (nombre para el campo 'efecto'):
-#     SLOWNESS, MINING_FATIGUE, WITHER, POISON, BLINDNESS,
-#     DARKNESS, LEVITATION, WEAKNESS, NAUSEA, HUNGER, ABSORPTION
+# Supported Bukkit PotionEffectType identifiers:
+#   SLOWNESS, MINING_FATIGUE, WITHER, POISON, BLINDNESS,
+#   DARKNESS, LEVITATION, WEAKNESS, NAUSEA, HUNGER, ABSORPTION
 #
-#   Duraciones en TICKS (20 ticks = 1 segundo)
-# ================================================================
+# All durations are defined in server ticks (20 ticks = 1 second).
+# ==============================================================================
 
 poderes:
-  # ── FUEGO ──────────────────────────────────────────────────────
+  # ----------------------------------------------------------------------------
+  # Element: Fire (Fuego)
+  # ----------------------------------------------------------------------------
   fuego:
     nombre: "Fuego"
     habilitado: true
@@ -20,15 +22,17 @@ poderes:
     niveles:
       1:
         descripcion: "Prende fuego al objetivo por 3 segundos"
-        duracion-fuego: 60 # 3 segundos de fuego
+        duracion-fuego: 60
       2:
         descripcion: "Prende fuego al objetivo por 6 segundos"
-        duracion-fuego: 120 # 6 segundos de fuego
+        duracion-fuego: 120
       3:
         descripcion: "Infierno: fuego devastador por 10 segundos"
-        duracion-fuego: 200 # 10 segundos de fuego
+        duracion-fuego: 200
 
-  # ── HIELO ──────────────────────────────────────────────────────
+  # ----------------------------------------------------------------------------
+  # Element: Ice (Hielo)
+  # ----------------------------------------------------------------------------
   hielo:
     nombre: "Hielo"
     habilitado: true
@@ -57,7 +61,9 @@ poderes:
         amplificador2: 0
         duracion-efecto2: 60
 
-  # ── MUERTOS ────────────────────────────────────────────────────
+  # ----------------------------------------------------------------------------
+  # Element: Undead / Wither (Muertos)
+  # ----------------------------------------------------------------------------
   muertos:
     nombre: "Muertos"
     habilitado: true
@@ -84,7 +90,9 @@ poderes:
         amplificador2: 0
         duracion-efecto2: 80
 
-  # ── VIENTO ─────────────────────────────────────────────────────
+  # ----------------------------------------------------------------------------
+  # Element: Wind / Aero (Viento)
+  # ----------------------------------------------------------------------------
   viento:
     nombre: "Viento"
     habilitado: true
@@ -108,7 +116,9 @@ poderes:
         amplificador: 1
         duracion-efecto: 60
 
-  # ── ESCORPIÓN ──────────────────────────────────────────────────
+  # ----------------------------------------------------------------------------
+  # Element: Scorpion / Poison (Escorpión)
+  # ----------------------------------------------------------------------------
   escorpion:
     nombre: "Escorpión"
     habilitado: true
@@ -135,7 +145,9 @@ poderes:
         amplificador2: 0
         duracion-efecto2: 100
 
-  # ── AMATISTA ───────────────────────────────────────────────────
+  # ----------------------------------------------------------------------------
+  # Element: Amethyst / Triple Shot (Amatista)
+  # ----------------------------------------------------------------------------
   amatista:
     nombre: "Amatista"
     habilitado: true
@@ -159,7 +171,9 @@ poderes:
         amplificador2: 0
         duracion-efecto2: 40
 
-  # ── HUESO ──────────────────────────────────────────────────────
+  # ----------------------------------------------------------------------------
+  # Element: Bone / Fatigue (Hueso)
+  # ----------------------------------------------------------------------------
   hueso:
     nombre: "Hueso"
     habilitado: true
@@ -189,7 +203,9 @@ poderes:
         amplificador2: 1
         duracion-efecto2: 120
 
-  # ── TIERRA ─────────────────────────────────────────────────────
+  # ----------------------------------------------------------------------------
+  # Element: Earth (Tierra)
+  # ----------------------------------------------------------------------------
   tierra:
     nombre: "Tierra"
     habilitado: true

@@ -1,26 +1,27 @@
-# ================================================================
-#   NeaBows - Configuración Principal
-# ================================================================
+# ==============================================================================
+# NeaBows - Core Engine Configuration
+# Projectile Physics, Particle Density & Cooldown Thresholds
+# ==============================================================================
 
 settings:
-  # ¿Mostrar partículas de rastro en las flechas con poder?
+  # Enable projectile trajectory particle tracing
   trail-particles: true
-  # Ticks entre cada partícula de rastro (2 = denso, 4 = normal, 6 = ligero)
+  # Particle spawn interval in server ticks (2 = dense, 4 = balanced, 6 = lightweight)
   trail-interval: 2
-  # ¿Los poderes afectan a otros jugadores?
+  # Whether bow elemental effects affect other players
   affect-players: true
-  # ¿El poder te afecta a ti mismo si te disparas?
+  # Whether self-inflicted hits apply elemental effects
   affect-self: false
 
-# ─────────────────────────────────────────────────────────────────
-# Cooldowns (en segundos). Evita abusos de spam.
-# 0 = sin cooldown para ese poder.
-# El cooldown empieza cuando la flecha SALE del arco.
-# ─────────────────────────────────────────────────────────────────
+# ------------------------------------------------------------------------------
+# Cooldown Specification (Seconds)
+# Protects server tick rate from projectile spam exploits.
+# 0 = No cooldown applied. Cooldown triggers upon projectile launch.
+# ------------------------------------------------------------------------------
 cooldowns:
-  # Cooldown global si no se especifica uno específico
+  # Global fallback cooldown
   global: 3
-  # Cooldowns individuales por poder (sobreescriben al global)
+  # Specific elemental power overrides
   per-power:
     fuego: 3
     hielo: 4
@@ -30,9 +31,9 @@ cooldowns:
     hueso: 3
     tierra: 3
 
-# ─────────────────────────────────────────────────────────────────
-# Sonidos (nombres de la enum Sound de Bukkit 1.21.1)
-# ─────────────────────────────────────────────────────────────────
+# ------------------------------------------------------------------------------
+# Sound FX Bindings (Bukkit org.bukkit.Sound enum references)
+# ------------------------------------------------------------------------------
 sounds:
   fuego:
     shoot: ENTITY_BLAZE_SHOOT
