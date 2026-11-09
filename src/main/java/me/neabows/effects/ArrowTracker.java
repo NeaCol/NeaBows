@@ -6,7 +6,7 @@ import org.bukkit.entity.Entity;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.scheduler.BukkitTask;
 
-import java.util.HashMap;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.Map;
 import java.util.UUID;
 
@@ -22,7 +22,7 @@ public class ArrowTracker {
     private final NeaBows plugin;
 
     /** Flechas actualmente en vuelo: UUID → datos del poder. */
-    private final Map<UUID, ArrowData> tracked = new HashMap<>();
+    private final Map<UUID, ArrowData> tracked = new ConcurrentHashMap<>();
 
     private BukkitTask task;
 

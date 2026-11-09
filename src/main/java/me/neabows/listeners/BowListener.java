@@ -227,14 +227,12 @@ public class BowListener implements Listener {
             return;
         } catch (IllegalArgumentException ignored) {}
 
-        // Fallback: buscar por key de Minecraft (entity.blaze.shoot)
         try {
             String key = name.toLowerCase().replace("_", ".");
-            world.playSound(
-                loc,
-                org.bukkit.Registry.SOUNDS.get(NamespacedKey.minecraft(key)),
-                1.0f,
-                1.0f
+            var sound = org.bukkit.Registry.SOUNDS.get(NamespacedKey.minecraft(key));
+            if (sound != null) {
+                world.playSound(loc, sound, 1.0f, 1.0f);
+            }
         } catch (Exception ignored) {}
     }
 
